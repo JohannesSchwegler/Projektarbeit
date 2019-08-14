@@ -20,7 +20,7 @@ public class ReplaceText {
 			int width, int height) throws IOException {
 
 		File file = new File(
-				"C:\\Users\\Bachelorarbeit\\eclipse-workspace\\maven-projektarbeit\\src\\test\\resources\\specs\\"
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\"
 						+ fileName + ".gspec");
 
 		// Create the file
@@ -32,23 +32,47 @@ public class ReplaceText {
 		}
 
 		File fileToBeModified = new File(
-				"C:\\Users\\Bachelorarbeit\\eclipse-workspace\\maven-projektarbeit\\src\\test\\resources\\specs\\"
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\"
 						+ fileName + ".gspec");
 
-		String oldContent = "@objects\r\n" + "	    header-*              css        .column\r\n"
-				+ "	    hero                  css        .hero__container\r\n"
-				+ "	    float                css         .float__right\r\n"
-				+ "	    img-*                  css       img\r\n"
-				+ "	    containerIMG          xpath      ContainerDesRechtenBildes\r\n"
-				+ "	    imgRight             xpath       rechtesBild\r\n" + "	    \r\n" + "	= Main section =\r\n"
-				+ "	    header-1:\r\n" + "	         aligned horizontally all header-2\r\n"
-				+ "	         aligned horizontally all header-3\r\n" + "	         aligned horizontally top header-4\r\n"
-				+ "	         below hero\r\n" + "	    \r\n" + "\r\n" + "	    hero:\r\n"
-				+ "	         width 100% of screen/width\r\n" + "	         height 300px\r\n" + "\r\n" + "\r\n"
-				+ "	#Floats testen   \r\n" + "	    float:\r\n" + "	         inside header-2 0 px right  \r\n" + "\r\n"
-				+ "	         \r\n" + "\r\n" + "	    @forEach [img-*] as IMG\r\n" + "	        ${IMG}:\r\n"
-				+ "	            width widthIMG\r\n" + "                height heightIMG \r\n" + "	    \r\n"
-				+ "	    imgRight:\r\n" + "	        inside containerIMG 0px right  ";
+		String oldContent = "@objects\r\n" + 
+				"    body1                 css         body\r\n" + 
+				"    header-*             css        .column\r\n" + 
+				"    hero                 css        .hero__container\r\n" + 
+				"    float                css         .float__right\r\n" + 
+				"    img-*                css         img\r\n" + 
+				"    containerIMG         xpath       ContainerDesRechtenBildes\r\n" + 
+				"    imgRight             xpath       rechtesBild\r\n" + 
+				"    aside1               xpath       /html/body/aside\r\n" + 
+				"    \r\n" + 
+				"= Main section =\r\n" + 
+				"    header-1:\r\n" + 
+				"         aligned horizontally all header-2\r\n" + 
+				"         aligned horizontally all header-3\r\n" + 
+				"         aligned horizontally top header-4\r\n" + 
+				"         below hero\r\n" + 
+				"    \r\n" + 
+				"\r\n" + 
+				"    hero:\r\n" + 
+				"         width 100% of screen/width\r\n" + 
+				"         height 300px\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
+				"#Floats testen   \r\n" + 
+				"    float:\r\n" + 
+				"         inside header-2 0 px right  \r\n" + 
+				"\r\n" + 
+				"         \r\n" + 
+				"\r\n" + 
+				"    @forEach [img-*] as IMG\r\n" + 
+				"        ${IMG}:\r\n" + 
+				"            width widthIMG \r\n" + 
+				"    \r\n" + 
+				"    imgRight:\r\n" + 
+				"        inside containerIMG 0px right  \r\n" + 
+				"        \r\n" + 
+				"    aside1:\r\n" + 
+				"       inside body1 90% top/viewport    ";
 
 		BufferedReader reader = null;
 
@@ -73,8 +97,48 @@ public class ReplaceText {
 					.replaceAll("rechtesBild", xPathImageRightFloat)
 					.replaceAll("widthIMG", Integer.toString(width) + "px")
 					.replaceAll("heightIMG", Integer.toString(height) + "px");
-
+			System.out.println(newContent);
 			// Rewriting the input text file with newContent
+
+			// @objects
+			// body css body
+			// header-* css .column
+			// hero css .hero__container
+			// float css .float__right
+			// img-* css img
+			// containerIMG xpath ContainerDesRechtenBildes
+			// imgRight xpath rechtesBild
+			// aside xpath /html/body/aside
+			//
+			// =Main section=
+			// header-1:
+			// aligned horizontally all header-2
+			// aligned horizontally all header-3
+			// aligned horizontally top header-4
+			// below hero
+			//
+			//
+			// hero:
+			// width 100% of screen/width
+			// height 300px
+			//
+			//
+			// #Floats testen
+			// float:
+			// inside header-2 0 px right
+			//
+			//
+			//
+			// @forEach [img-*] as IMG
+			// ${IMG}:
+			// width widthIMG
+			// height heightIMG
+			//
+			// imgRight:
+			// inside containerIMG 0px right
+			//
+			// aside:
+			// inside body 90% top
 
 			writer = new FileWriter(fileToBeModified);
 
@@ -111,6 +175,8 @@ public class ReplaceText {
 
 	public static void main(String[] args) throws IOException {
 		deleteFile(Paths.get(
-				"C:\\Users\\Bachelorarbeit\\eclipse-workspace\\maven-projektarbeit\\src\\test\\resources\\specs\\Abgabe 1.gspec"));
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\Abgabe1.gspec"));
+
+		ReplaceText.createFile("Abgabe1", "1", "23", 23, 23);
 	}
 }

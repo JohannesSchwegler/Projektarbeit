@@ -1,34 +1,39 @@
 @objects
-	    header-*              css        .column
-	    hero                  css        .hero__container
-	    float                css         .float__right
-	    img-*                  css       img
-	    containerIMG          xpath      /html/body/div[1]
-	    imgRight             xpath       /html/body/div[1]/img[2]
-	    
-	= Main section =
-	    header-1:
-	         aligned horizontally all header-2
-	         aligned horizontally all header-3
-	         aligned horizontally top header-4
-	         below hero
-	    
+		    body                 css         body
+		    header-*             css         .column
+		    hero                 css         .hero__container
+		    float                css         .float__right
+		    img-*                css         img
+		    containerIMG         xpath       /html/body/div[1]
+		    imgRight             xpath       /html/body/div[1]/img[2]
+		    aside                xpath       /html/body/aside
+		    
+=Main section=
+		    header-1:
+		         aligned horizontally all header-2
+		         aligned horizontally all header-3
+		         aligned horizontally top header-4
+		         below hero
+		    
 
-	    hero:
-	         width 100% of screen/width
-	         height 300px
+		    hero:
+		         width 100% of screen/width
+		         height 300px
 
 
-	#Floats testen   
-	    float:
-	         inside header-2 0 px right  
+		#Floats testen   
+		    float:
+		         inside header-2 0 px right  
 
-	         
+		         
 
-	    @forEach [img-*] as IMG
-	        ${IMG}:
-	            width 25px
-                height 205px 
-	    
-	    imgRight:
-	        inside containerIMG 0px right  
+		    @forEach [img-*] as IMG
+		        ${IMG}:
+		            width 25px
+	                height 205px 
+		    
+		    imgRight:
+		        inside containerIMG 0px right  
+		      
+		    aside:
+		        inside body 90% top    

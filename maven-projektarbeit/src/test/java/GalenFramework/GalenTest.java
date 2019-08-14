@@ -36,7 +36,7 @@ public class GalenTest {
 	@Before
 	public void setUp() throws IOException {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Bachelorarbeit\\eclipse-workspace\\maven-projektarbeit\\chromedriver.exe");
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\chromedriver.exe");
 		// Create a Chrome Driver
 		driver = new ChromeDriver();
 		// Set the browser size for desktop
@@ -120,7 +120,7 @@ public class GalenTest {
 		int[] imgWidthHeight = getImageWidthAndHeight();
 		System.out.println(Arrays.toString(imgWidthHeight));
 
-		ReplaceText.createFile("Abgabe 1", xPathParentImageRightFloat, xPathImageRightFloat, imgWidthHeight[0],
+		ReplaceText.createFile("Abgabe1", xPathParentImageRightFloat, xPathImageRightFloat, imgWidthHeight[0],
 				imgWidthHeight[1]);
 
 	}
@@ -138,7 +138,8 @@ public class GalenTest {
 	public void homePageLayoutTest() throws IOException {
 		// Create a layoutReport object
 		// checkLayout function checks the layout and returns a LayoutReport object
-		LayoutReport layoutReport = Galen.checkLayout(driver, "specs/grid.gspec", Arrays.asList("desktop"));
+		System.out.println("heir");
+		LayoutReport layoutReport = Galen.checkLayout(driver, "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\grid.gspec", Arrays.asList("desktop"));
 
 		// Create a tests list
 		List<GalenTestInfo> tests = new LinkedList<GalenTestInfo>();
