@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+*{
+margin:0;
+padding: 0;
+box-sizing:border-box;
+}
+
+/* 9.hintergrund */
+#index, #seite2,#seite3{background: url("../pictures/hintergrund.jpg");}
+#seite4{background: url("../pictures/hintergrund.png");}
+
+
+/* nr7 hintergrund farbe */
+  .kopfzeile{background-color: #FF0040;}
+  .fußzeile {background-color: #FF0040; }
+
+/* Nr 7 font: style variant weight font-size/line-height familiy*/
+p,.header_p, .asection_p, .aaside_p,.afooter_p,.footer_p
+{font: normal normal 400 15px/30px "Times New Roman", Times, serif;}
+
+h1,.header_h,.footer_h{font: normal normal bold 30px/34px "Times New Roman", Times, serif;}
+
+h2,.article_h{font: normal normal 600 24px/32px "Times New Roman",Times, serif;}
+
+/* eigene Schriftfarbe nr7 */
+h1,.header_h,.footer_h{color: #D8D8D8;}
+
+/* nr7 Textausrichtung */
+p,.header_p, .asection_p, .aaside_p,.afooter_p, .footer_p{text-align: left;}
+
+/* nr 8 float left und breite + höhe aller bilder*/
+.bild1{float:right; width: 450px; height: 450px;}
+.bild2{width: 400px; height: 290px;}
+.bild3{width: 600px; height: 400px;}
+.bild4{width: 550px; height: 420px;}
+
+/*  10.unterer Rand */
+h1,h2,p,
+.header_h, .article_h,.footer_h,
+.header_p, .asection_p, .aaside_p,.afooter_p,.footer_p{margin-bottom: 10px;}
+
+/*  10.runderrahmen */
+.rahmenrund{
+  padding: 35px 1px 40px 19px;
+  border: 2px solid black;
+         border-radius: 50%;}
+/* Positionierung mit CSS */
+
+header,#header1{display:block;
+margin: 20px 0px 20px 0px;
+padding: 3px 0px 4px 0px;}
+
+nav,#nav1{float: left;
+      width: 32%;
+    padding: 1px 1px 1px 1px;
+  margin: 2px 3px 2px 3px;}
+
+
+article,#article1{float:left;
+          width:65%;
+        margin: 2px 1px 2px 1px;
+      padding: 1px 1px 1px 1px;
+      clear: left;}
+
+.body__aside{
+  float:right;
+  width: 32%;
+  height:100%;
+  background: #8A0829;
+}  
+
+/* clear, dass sich Footer nicht nach oben verschiebt */
+footer,#footer1{clear: both;
+         display: block;
+         margin: 0px 5px 0px 5px;
+         padding:  1px 1px 1px 1px;
+       }
+/* 11.Aside Elemente rechts, 15% */
+aside,#saside1{float: right;
+  margin-left: 1.5%;
+         width: 20%;}
+/* aside liegt rechts neben den section elementen*/
+section,#section1,#section2{width:75%;
+  margin-right: 1.5%; display: inline-block;
+}
+
+/*   12.Pseudoelement   */
+
+.hinweis::before{content: "Wichtig:"; color: blue; display: inline-block;}
+
+/*navigationsmenü: */
+
+ul.navigation {font: bold 14px "Times New Roman",Times, serif;
+  display: flex;}
+
+ li.navigation {background: #848484;
+                color: #8A0829;
+                list-style: none;
+                margin-bottom: 20px;}
+
+a.navigation {
+color: #610B21;
+
+text-decoration: none;
+display: block;
+text-decoration: none;
+}
+a.navigation:hover {background: #FAFAFA;}

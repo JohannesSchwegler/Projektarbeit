@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "ws1819 layout",
+    "startedAt" : 1565885720487,
+    "endedAt" : 1565885720487,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 19,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 19
+    },
+    "testId" : "1-ws1819-layout",
+    "failed" : false,
+    "duration" : 0
+  } ]
+}

@@ -1,38 +1,16 @@
 @objects
-    body1                 css         body
-    header-*             css        .column
-    hero                 css        .hero__container
-    float                css         .float__right
-    img-*                css         img
-    containerIMG         xpath       1
-    imgRight             xpath       23
-    aside1               xpath       /html/body/aside
+    li-*                 css          ul li
     
 = Main section =
-    header-1:
-         aligned horizontally all header-2
-         aligned horizontally all header-3
-         aligned horizontally top header-4
-         below hero
+      li-1:
+       aligned horizontally all li-2
+       aligned horizontally all li-3
+       
+    @for [1 - 2] as index
+        li-${index}:
+            aligned horizontally all li-${index + 1}   
     
-
-    hero:
-         width 100% of screen/width
-         height 300px
-
-
-#Floats testen   
-    float:
-         inside header-2 0 px right  
-
-         
-
-    @forEach [img-*] as IMG
-        ${IMG}:
-            width 23px 
-    
-    imgRight:
-        inside containerIMG 0px right  
-        
-    aside1:
-       inside body1 90% top/viewport    
+    @forEach [li-*] as itemName, next as nextItem
+        ${itemName}:
+            aligned horizontally all ${nextItem} 
+       

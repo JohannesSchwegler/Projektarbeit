@@ -1,0 +1,246 @@
+{
+  "testId" : "1-ws1819-layout",
+  "name" : "ws1819 layout",
+  "report" : {
+    "nodes" : [ {
+      "name" : "check ws1819 layout",
+      "status" : "info",
+      "time" : 1565885720487,
+      "includedTags" : [ "desktop" ],
+      "excludedTags" : [ ],
+      "sections" : [ {
+        "name" : "Main section",
+        "place" : {
+          "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+          "lineNumber" : 14
+        },
+        "objects" : [ {
+          "name" : "nav",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 17
+            },
+            "name" : "below header",
+            "highlight" : [ "nav", "header" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 18
+            },
+            "name" : "inside body 3px left",
+            "highlight" : [ "nav", "body" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 19
+            },
+            "name" : "width ~ 32% of viewport/width",
+            "highlight" : [ "nav" ]
+          } ]
+        }, {
+          "name" : "article",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 22
+            },
+            "name" : "below nav",
+            "highlight" : [ "article", "nav" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 23
+            },
+            "name" : "inside body ~ 0px left",
+            "highlight" : [ "article", "body" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 24
+            },
+            "name" : "width ~ 65% of viewport/width",
+            "highlight" : [ "article" ]
+          } ]
+        }, {
+          "name" : "aside",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 27
+            },
+            "name" : "below nav",
+            "highlight" : [ "aside", "nav" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 28
+            },
+            "name" : "inside body ~ 0px right",
+            "highlight" : [ "aside", "body" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 29
+            },
+            "name" : "width ~ 32% of viewport/width",
+            "highlight" : [ "aside" ]
+          } ]
+        }, {
+          "name" : "header",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 33
+            },
+            "name" : "width 100% of viewport/width",
+            "highlight" : [ "header" ]
+          } ]
+        }, {
+          "name" : "footer",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 37
+            },
+            "name" : "width 1877 px",
+            "highlight" : [ "footer" ]
+          } ]
+        }, {
+          "name" : "img",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 40
+            },
+            "name" : "width 450px",
+            "highlight" : [ "img" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 41
+            },
+            "name" : "height 450px",
+            "highlight" : [ "img" ]
+          } ]
+        }, {
+          "name" : "imgRight",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 44
+            },
+            "name" : "inside section 0px right",
+            "highlight" : [ "imgRight", "section" ]
+          } ]
+        }, {
+          "name" : "li-1",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 48
+            },
+            "name" : "aligned horizontally all li-2",
+            "highlight" : [ "li-1", "li-2" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 48
+            },
+            "name" : "aligned horizontally all li-3",
+            "highlight" : [ "li-1", "li-3" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 48
+            },
+            "name" : "aligned horizontally all li-4",
+            "highlight" : [ "li-1", "li-4" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 48
+            },
+            "name" : "aligned horizontally all li-5",
+            "highlight" : [ "li-1", "li-5" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.gspec",
+              "lineNumber" : 48
+            },
+            "name" : "aligned horizontally all li-6",
+            "highlight" : [ "li-1", "li-6" ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "nav" : {
+          "area" : [ 3, 133, 604, 38 ]
+        },
+        "img" : {
+          "area" : [ 470, 520, 450, 450 ]
+        },
+        "imgRight" : {
+          "area" : [ 470, 520, 450, 450 ]
+        },
+        "footer" : {
+          "area" : [ 5, 1109, 1877, 105 ]
+        },
+        "section" : {
+          "area" : [ 2, 478, 918, 568 ]
+        },
+        "body" : {
+          "area" : [ 0, 20, 1887, 1194 ]
+        },
+        "article" : {
+          "area" : [ 1, 175, 1227, 932 ]
+        },
+        "li-2" : {
+          "area" : [ 94, 134, 119, 16 ]
+        },
+        "li-3" : {
+          "area" : [ 213, 134, 87, 16 ]
+        },
+        "li-1" : {
+          "area" : [ 4, 134, 90, 16 ]
+        },
+        "aside" : {
+          "area" : [ 1283, 173, 604, 466 ]
+        },
+        "li-6" : {
+          "area" : [ 401, 134, 117, 16 ]
+        },
+        "li-4" : {
+          "area" : [ 299, 134, 70, 16 ]
+        },
+        "li-5" : {
+          "area" : [ 369, 134, 31, 16 ]
+        },
+        "header" : {
+          "area" : [ 0, 20, 1887, 91 ]
+        }
+      },
+      "screenshot" : "layout-1-screenshot.png",
+      "type" : "layout"
+    } ]
+  }
+}

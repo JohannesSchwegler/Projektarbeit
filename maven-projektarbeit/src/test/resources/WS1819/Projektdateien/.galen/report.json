@@ -1,0 +1,45 @@
+{
+  "tests" : [ {
+    "name" : "home-page.gspec",
+    "startedAt" : 1564561915202,
+    "endedAt" : 1564561922818,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 0,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "1-home-page.gspec",
+    "failed" : true,
+    "duration" : 7616
+  }, {
+    "name" : "check",
+    "startedAt" : 1564561922818,
+    "endedAt" : 1564561929349,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 0,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "2-check",
+    "failed" : true,
+    "duration" : 6531
+  }, {
+    "name" : "home-page.gspec",
+    "startedAt" : 1564561929349,
+    "endedAt" : 1564561936017,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 0,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 1
+    },
+    "testId" : "3-home-page.gspec",
+    "failed" : true,
+    "duration" : 6668
+  } ]
+}
