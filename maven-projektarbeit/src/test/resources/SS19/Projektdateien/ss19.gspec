@@ -1,0 +1,43 @@
+@objects
+    body          xpath      /html/body
+    header        xpath      /html/body/article/header
+    nav           xpath      /html/body/nav
+    article       xpath      /html/body/article
+    aside         xpath      /html/body/aside
+    footer        xpath      /html/body/article/footer
+    img           css        img
+    section       id         section2
+    imgRight      xpath      //*[@id="section2"]/a/img
+    li-*          css        .navigation li
+
+
+= Main section =
+     
+    nav:
+       width ${viewport.width() - 20} px   
+
+    article:
+       below nav
+       inside body ~ 11px right
+       width ~ 65% of viewport/width
+
+    aside:
+       below nav
+       inside body ~ 10px left
+       width ~ 32% of viewport/width  
+
+    
+
+    footer:
+       inside article ~ 0px left, ~ 0px right
+
+    img:
+       width 450px
+       height 450px  
+
+    imgRight:
+       inside section 0px right  
+
+    @for [1-5] as index
+        li-1:
+            aligned horizontally all li-${index + 1}   

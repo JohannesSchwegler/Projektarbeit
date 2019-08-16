@@ -1,0 +1,25 @@
+{
+  "testId" : "3-home-page.gspec",
+  "name" : "home-page.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  home-page.gspec --url file:///C:/Users/Bachelorarbeit/Desktop/projekt/index.html --size 1920x1080 --htmlreport .galen check home-page.gspec --url file:///C:/Users/Bachelorarbeit/Desktop/projekt/index.html --size 1920x1080 --htmlreport .",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "SyntaxException: Cannot parse range value: \"\"\n    in home-page.gspec:23",
+          "status" : "error",
+          "time" : 1564561934771,
+          "stacktrace" : "com.galenframework.parser.SyntaxException: Cannot parse range value: \"\"\n    in home-page.gspec:23\r\n\tat com.galenframework.parser.ExpectRangeValue.read(ExpectRangeValue.java:59)\r\n\tat com.galenframework.parser.ExpectRange.read(ExpectRange.java:42)\r\n\tat com.galenframework.parser.ExpectRange.read(ExpectRange.java:25)\r\n\tat com.galenframework.parser.ExpectLocations.read(ExpectLocations.java:34)\r\n\tat com.galenframework.parser.ExpectLocations.read(ExpectLocations.java:27)\r\n\tat com.galenframework.speclang2.specs.SpecNearProcessor.process(SpecNearProcessor.java:37)\r\n\tat com.galenframework.speclang2.specs.SpecReader.read(SpecReader.java:116)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processSpec(PageSectionProcessor.java:220)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processObject(PageSectionProcessor.java:191)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.processSection(PageSectionProcessor.java:75)\r\n\tat com.galenframework.speclang2.pagespec.PageSectionProcessor.process(PageSectionProcessor.java:63)\r\n\tat com.galenframework.speclang2.pagespec.PostProcessor.processNode(PostProcessor.java:39)\r\n\tat com.galenframework.speclang2.pagespec.PostProcessor.process(PostProcessor.java:33)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:62)\r\n\tat com.galenframework.speclang2.pagespec.PageSpecReader.read(PageSpecReader.java:45)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:68)\r\n\tat com.galenframework.api.Galen.checkLayout(Galen.java:59)\r\n\tat com.galenframework.suite.actions.GalenPageActionCheck.execute(GalenPageActionCheck.java:52)\r\n\tat com.galenframework.runner.GalenPageRunner.executeAction(GalenPageRunner.java:84)\r\n\tat com.galenframework.runner.GalenPageRunner.run(GalenPageRunner.java:76)\r\n\tat com.galenframework.runner.GalenBasicTestRunner.runTest(GalenBasicTestRunner.java:76)\r\n\tat com.galenframework.tests.GalenBasicTest.execute(GalenBasicTest.java:55)\r\n\tat com.galenframework.TestRunnable.runTest(TestRunnable.java:75)\r\n\tat com.galenframework.TestRunnable.run(TestRunnable.java:101)\r\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)\r\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)\r\n\tat java.lang.Thread.run(Unknown Source)\r\nCaused by: java.lang.NumberFormatException: For input string: \"\"\r\n\tat java.lang.NumberFormatException.forInputString(Unknown Source)\r\n\tat java.lang.Integer.parseInt(Unknown Source)\r\n\tat java.lang.Integer.parseInt(Unknown Source)\r\n\tat com.galenframework.specs.RangeValue.parseRangeValue(RangeValue.java:164)\r\n\tat com.galenframework.parser.ExpectRangeValue.read(ExpectRangeValue.java:56)\r\n\t... 26 more\r\n",
+          "type" : "node"
+        } ],
+        "time" : 1564561934681,
+        "type" : "node"
+      } ],
+      "time" : 1564561929350,
+      "type" : "node"
+    } ]
+  }
+}

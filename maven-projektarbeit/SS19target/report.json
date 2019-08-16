@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "SS19 layout",
+    "startedAt" : 1565943857598,
+    "endedAt" : 1565943857598,
+    "failed" : false,
+    "statistic" : {
+      "passed" : 16,
+      "errors" : 0,
+      "warnings" : 0,
+      "total" : 16
+    },
+    "testId" : "1-ss19-layout",
+    "duration" : 0,
+    "failed" : false
+  } ]
+}

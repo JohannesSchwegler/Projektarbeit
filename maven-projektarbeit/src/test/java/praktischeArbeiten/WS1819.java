@@ -36,7 +36,7 @@ public class WS1819 {
 	public void setUp() throws IOException {
 
 		String pathDriver = "chromedriver.exe";
-		String pathPage = "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\index.html";
+		String pathPage = "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\ws1819.html";
 
 		System.setProperty("webdriver.chrome.driver", pathDriver);
 
@@ -88,7 +88,7 @@ public class WS1819 {
 	public void openFile(boolean oeffnen) throws IOException {
 		if (oeffnen) {
 			File datei = new File(
-					"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\report.html");
+					"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\ws1819target\\report.html");
 
 			// Checkt ob der Desktop unterstützt wird
 			if (!Desktop.isDesktopSupported()) {

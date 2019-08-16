@@ -1,0 +1,216 @@
+{
+  "testId" : "1-ss19-layout",
+  "name" : "SS19 layout",
+  "report" : {
+    "nodes" : [ {
+      "name" : "check SS19 layout",
+      "status" : "info",
+      "time" : 1565943857599,
+      "includedTags" : [ "desktop" ],
+      "excludedTags" : [ ],
+      "sections" : [ {
+        "name" : "Main section",
+        "place" : {
+          "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+          "lineNumber" : 14
+        },
+        "objects" : [ {
+          "name" : "nav",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 17
+            },
+            "name" : "width 1867 px",
+            "highlight" : [ "nav" ]
+          } ]
+        }, {
+          "name" : "article",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 20
+            },
+            "name" : "below nav",
+            "highlight" : [ "article", "nav" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 21
+            },
+            "name" : "inside body ~ 11px right",
+            "highlight" : [ "article", "body" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 22
+            },
+            "name" : "width ~ 65% of viewport/width",
+            "highlight" : [ "article" ]
+          } ]
+        }, {
+          "name" : "aside",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 25
+            },
+            "name" : "below nav",
+            "highlight" : [ "aside", "nav" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 26
+            },
+            "name" : "inside body ~ 10px left",
+            "highlight" : [ "aside", "body" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 27
+            },
+            "name" : "width ~ 32% of viewport/width",
+            "highlight" : [ "aside" ]
+          } ]
+        }, {
+          "name" : "footer",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 32
+            },
+            "name" : "inside article ~ 0px left, ~ 0px right",
+            "highlight" : [ "footer", "article" ]
+          } ]
+        }, {
+          "name" : "img",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 35
+            },
+            "name" : "width 450px",
+            "highlight" : [ "img" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 36
+            },
+            "name" : "height 450px",
+            "highlight" : [ "img" ]
+          } ]
+        }, {
+          "name" : "imgRight",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 39
+            },
+            "name" : "inside section 0px right",
+            "highlight" : [ "imgRight", "section" ]
+          } ]
+        }, {
+          "name" : "li-1",
+          "specs" : [ {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 43
+            },
+            "name" : "aligned horizontally all li-2",
+            "highlight" : [ "li-1", "li-2" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 43
+            },
+            "name" : "aligned horizontally all li-3",
+            "highlight" : [ "li-1", "li-3" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 43
+            },
+            "name" : "aligned horizontally all li-4",
+            "highlight" : [ "li-1", "li-4" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 43
+            },
+            "name" : "aligned horizontally all li-5",
+            "highlight" : [ "li-1", "li-5" ]
+          }, {
+            "status" : "info",
+            "place" : {
+              "filePath" : "C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\SS19\\Projektdateien\\ss19.gspec",
+              "lineNumber" : 43
+            },
+            "name" : "aligned horizontally all li-6",
+            "highlight" : [ "li-1", "li-6" ]
+          } ]
+        } ]
+      } ],
+      "objects" : {
+        "nav" : {
+          "area" : [ 10, 0, 1867, 36 ]
+        },
+        "img" : {
+          "area" : [ 1122, 514, 450, 450 ]
+        },
+        "imgRight" : {
+          "area" : [ 1122, 514, 450, 450 ]
+        },
+        "footer" : {
+          "area" : [ 663, 1070, 1212, 105 ]
+        },
+        "section" : {
+          "area" : [ 663, 472, 909, 598 ]
+        },
+        "body" : {
+          "area" : [ 0, 0, 1887, 1422 ]
+        },
+        "article" : {
+          "area" : [ 662, 38, 1214, 1138 ]
+        },
+        "li-2" : {
+          "area" : [ 100, 0, 119, 16 ]
+        },
+        "li-3" : {
+          "area" : [ 219, 0, 87, 16 ]
+        },
+        "li-1" : {
+          "area" : [ 10, 0, 90, 16 ]
+        },
+        "aside" : {
+          "area" : [ 10, 36, 597, 569 ]
+        },
+        "li-6" : {
+          "area" : [ 407, 0, 117, 16 ]
+        },
+        "li-4" : {
+          "area" : [ 305, 0, 70, 16 ]
+        },
+        "li-5" : {
+          "area" : [ 375, 0, 31, 16 ]
+        }
+      },
+      "screenshot" : "layout-1-screenshot.png",
+      "type" : "layout"
+    } ]
+  }
+}
