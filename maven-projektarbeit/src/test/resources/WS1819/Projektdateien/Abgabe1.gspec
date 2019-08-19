@@ -6,35 +6,35 @@
     aside         xpath      /html/body/aside
     footer        xpath      /html/body/footer
     img           css        img
-    Container     id         ContainerDesRechtenBildes
-    imgRight      xpath      RechtesBild
+    Container     css        #section2
+    imgRight      xpath      /html[1]/body[1]/article[1]/section[2]/a[1]/img[1]
     li-*          css        .navigation li
 
 
 = Main section =
      
     header:
-       width <<${viewport.width() - marginHeader} px>>    
+       width ${viewport.width() - 0} px    
        
         
     nav:
        below header
-       inside body <<marginNavigationLeft>>px left
+       inside body 3px left
        width ~ 32% of viewport/width
 
     article:
        below nav
-       inside body <<marginArticleLeft>>px left
+       inside body 1px left
        width ~ 65% of viewport/width
 
     aside:
        below nav
-       inside body <<marginAsideRight>>px right 
+       inside body 0px right 
        width ~ 32% of viewport/width  
 
      
     footer:
-       width <<${viewport.width() - marginFooter} px>>
+       width ${viewport.width() - 10} px
 
     img:
        width 450px

@@ -13,17 +13,27 @@ import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+
+import GalenFramework.GalenTest;
 
 public class ReplaceText {
 
-	public static void createFile(String fileName, String xPathContainerRechtesBild, String xPathImageRightFloat,
-			int width, int height) throws IOException {
+	public static void createFile(String fileName, String cssContainerRechtesBild, String xPathImageRightFloat,
+			List<int[]> margins) throws IOException {
 
 		File file = new File(
-				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\"
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\"
 						+ fileName + ".gspec");
 
 		// Create the file
+
+		int[] marginHeader = margins.get(0);
+		int[] marginNavigation = margins.get(1);
+		int[] marginArticle = margins.get(2);
+		int[] marginAside = margins.get(3);
+		int[] marginFooter = margins.get(4);
+
 		if (file.createNewFile()) {
 			System.out.println("File is created!");
 		} else {
@@ -32,47 +42,58 @@ public class ReplaceText {
 		}
 
 		File fileToBeModified = new File(
-				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\"
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\"
 						+ fileName + ".gspec");
 
 		String oldContent = "@objects\r\n" + 
-				"    body1                 css         body\r\n" + 
-				"    header-*             css        .column\r\n" + 
-				"    hero                 css        .hero__container\r\n" + 
-				"    float                css         .float__right\r\n" + 
-				"    img-*                css         img\r\n" + 
-				"    containerIMG         xpath       ContainerDesRechtenBildes\r\n" + 
-				"    imgRight             xpath       rechtesBild\r\n" + 
-				"    aside1               xpath       /html/body/aside\r\n" + 
-				"    \r\n" + 
+				"    body          xpath      /html/body\r\n" + 
+				"    header        xpath      /html/body/header\r\n" + 
+				"    nav           xpath      /html/body/nav\r\n" + 
+				"    article       xpath      /html/body/article\r\n" + 
+				"    aside         xpath      /html/body/aside\r\n" + 
+				"    footer        xpath      /html/body/footer\r\n" + 
+				"    img           css        img\r\n" + 
+				"    Container     css        ContainerDesRechtenBildes\r\n" + 
+				"    imgRight      xpath      RechtesBild\r\n" + 
+				"    li-*          css        .navigation li\r\n" + 
+				"\r\n" + 
+				"\r\n" + 
 				"= Main section =\r\n" + 
-				"    header-1:\r\n" + 
-				"         aligned horizontally all header-2\r\n" + 
-				"         aligned horizontally all header-3\r\n" + 
-				"         aligned horizontally top header-4\r\n" + 
-				"         below hero\r\n" + 
-				"    \r\n" + 
-				"\r\n" + 
-				"    hero:\r\n" + 
-				"         width 100% of screen/width\r\n" + 
-				"         height 300px\r\n" + 
-				"\r\n" + 
-				"\r\n" + 
-				"#Floats testen   \r\n" + 
-				"    float:\r\n" + 
-				"         inside header-2 0 px right  \r\n" + 
-				"\r\n" + 
-				"         \r\n" + 
-				"\r\n" + 
-				"    @forEach [img-*] as IMG\r\n" + 
-				"        ${IMG}:\r\n" + 
-				"            width widthIMG \r\n" + 
-				"    \r\n" + 
-				"    imgRight:\r\n" + 
-				"        inside containerIMG 0px right  \r\n" + 
+				"     \r\n" + 
+				"    header:\r\n" + 
+				"       width <<${viewport.width() - marginHeader} px>>    \r\n" + 
+				"       \r\n" + 
 				"        \r\n" + 
-				"    aside1:\r\n" + 
-				"       inside body1 90% top/viewport    ";
+				"    nav:\r\n" + 
+				"       below header\r\n" + 
+				"       inside body <<marginNavigationLeft>>px left\r\n" + 
+				"       width ~ 32% of viewport/width\r\n" + 
+				"\r\n" + 
+				"    article:\r\n" + 
+				"       below nav\r\n" + 
+				"       inside body <<marginArticleLeft>>px left\r\n" + 
+				"       width ~ 65% of viewport/width\r\n" + 
+				"\r\n" + 
+				"    aside:\r\n" + 
+				"       below nav\r\n" + 
+				"       inside body <<marginAsideRight>>px right \r\n" + 
+				"       width ~ 32% of viewport/width  \r\n" + 
+				"\r\n" + 
+				"     \r\n" + 
+				"    footer:\r\n" + 
+				"       width <<${viewport.width() - marginFooter} px>>\r\n" + 
+				"\r\n" + 
+				"    img:\r\n" + 
+				"       width 450px\r\n" + 
+				"       height 450px  \r\n" + 
+				"\r\n" + 
+				"    imgRight:\r\n" + 
+				"       inside Container 0px right  \r\n" + 
+				"\r\n" + 
+				"    @for [1-5] as index\r\n" + 
+				"        li-1:\r\n" + 
+				"            aligned horizontally all li-${index + 1}   \r\n" + 
+				"";
 
 		BufferedReader reader = null;
 
@@ -92,11 +113,16 @@ public class ReplaceText {
 			}
 
 			// Replacing oldString with newString in the oldContent
+System.out.println();
+			String newContent = oldContent.replaceAll("ContainerDesRechtenBildes", cssContainerRechtesBild)
+					.replaceAll("RechtesBild", xPathImageRightFloat)
+					.replaceAll("marginHeader", Integer.toString(marginHeader[1] + marginHeader[3]))
+					.replaceAll("marginNavigationLeft", Integer.toString(marginNavigation[1]))
+					.replaceAll("marginArticleLeft", Integer.toString(marginArticle[1]))
+					.replaceAll("marginAsideRight", Integer.toString(marginAside[3]))
+					.replaceAll("marginFooter", Integer.toString(marginFooter[1] + marginFooter[3]))
+					.replaceAll("<<", "").replaceAll(">>", "");
 
-			String newContent = oldContent.replaceAll("ContainerDesRechtenBildes", xPathContainerRechtesBild)
-					.replaceAll("rechtesBild", xPathImageRightFloat)
-					.replaceAll("widthIMG", Integer.toString(width) + "px")
-					.replaceAll("heightIMG", Integer.toString(height) + "px");
 			System.out.println(newContent);
 			// Rewriting the input text file with newContent
 
@@ -175,8 +201,7 @@ public class ReplaceText {
 
 	public static void main(String[] args) throws IOException {
 		deleteFile(Paths.get(
-				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\specs\\Abgabe1.gspec"));
+				"C:\\Users\\Bachelorarbeit\\git\\Projektarbeit\\maven-projektarbeit\\src\\test\\resources\\WS1819\\Projektdateien\\Abgabe1.gspec"));
 
-		ReplaceText.createFile("Abgabe1", "1", "23", 23, 23);
 	}
 }
